@@ -20,5 +20,6 @@ export default defineNuxtConfig({
         },
       ],
     },
+    baseURL: "/nuxt-builder/",
   },
 })
