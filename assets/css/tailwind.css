@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900;
+  }
+}
+
+@layer components {
+  .builder-panel {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm;
+  }
+
+  .component-item {
+    @apply p-3 bg-gray-50 border border-gray-200 rounded-md cursor-grab 
+           hover:bg-gray-100 hover:border-primary-300 transition-all duration-200;
+  }
+
+  .component-item:active {
+    @apply cursor-grabbing;
+  }
+
+  .drop-zone {
+    @apply min-h-[200px] border-2 border-dashed border-gray-300 rounded-lg 
+           transition-all duration-200;
+  }
+
+  .drop-zone.drag-over {
+    @apply border-primary-500 bg-primary-50;
+  }
+
+  .placed-component {
+    @apply relative p-4 bg-white border border-gray-200 rounded-lg 
+           hover:border-primary-400 transition-all duration-200 group;
+  }
+
+  .placed-component:hover .component-actions {
+    @apply opacity-100;
+  }
+
+  .component-actions {
+    @apply absolute top-2 right-2 flex gap-1 opacity-0 transition-opacity duration-200;
+  }
+}
